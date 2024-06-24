@@ -105,7 +105,7 @@ func (u *Users) login() {
 				if u.Users[i].UserRol == Supervisor {
 					subMenuSupervisor()
 				} else {
-					subMenuLector()
+					//subMenuLector()
 				}
 			}
 		}
@@ -166,7 +166,7 @@ func submenuAdmin() {
 	case 4:
 		clearConsole()
 		println("Ingresa la credenciales de un Supervisor para poder acceder")
-		login()
+		//login()
 	case 5:
 		os.Exit(1)
 	default:
@@ -187,11 +187,11 @@ func subMenuSupervisor() {
 	fmt.Scanln(&nro)
 	switch nro {
 	case 1:
-		printLaborers()
+		//printLaborers()
 	case 2:
 		clearConsole()
 		println("Ingresa la credenciales de un Administrador para poder acceder")
-		login()
+		//login()
 	default:
 		println("Ingresa un número válido")
 	}
@@ -238,17 +238,19 @@ func makeTextFile() {
 }
 
 func main() {
-	usuarios := Users{}
-	usuarios.addUser("Pedro", "pedro123", Administrador)
-	usuarios.addUser("Lucia", "lucia123", Supervisor)
-	usuarios.addUser("Sofia", "sofia123", Lector)
-	usuarios.addUser("Lucas", "lucas123", Lector)
+	/*
+		usuarios := Users{}
+		usuarios.addUser("Pedro", "pedro123", Administrador)
+		usuarios.addUser("Lucia", "lucia123", Supervisor)
+		usuarios.addUser("Sofia", "sofia123", Lector)
+		usuarios.addUser("Lucas", "lucas123", Lector)
 
-	productos := Productos{}
-	productos.Id = 1
-	productos.addPrduct()
+		productos := Productos{}
+		productos.Id = 1
+		productos.addPrduct()
 
-	menu()
+		menu()
+	*/
 }
 
 func menuAgregarProducto() {

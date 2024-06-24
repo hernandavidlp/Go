@@ -30,14 +30,13 @@ func senderNumber(ch chan<- int, maxnro int) {
 
 // Recibo el número y lo multiplico por "nrovar";
 func receiver1(ch <-chan int) {
-	nrovar := 2
+	nrovar := 10
 	for num := range ch {
 		result := num * nrovar
-		fmt.Print("Receiver 1) ")
-		fmt.Printf("Recibido: %d * %d = %d\n", num, nrovar, result)
+		fmt.Print("Receiver 2) ")
+		fmt.Printf("Recibido: %d x %d = %d\n", num, nrovar, result)
 		fmt.Println("------------------------------------------")
 	}
-	close(ch)
 }
 
 // Recibo el número y lo sumo por "nrovar";
